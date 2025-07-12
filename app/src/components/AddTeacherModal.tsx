@@ -1,6 +1,6 @@
-
+"use client"
 import React, { useState } from 'react';
-import { Teacher } from '@/pages/Index';
+import { Teacher } from '@/app/types/type';
 import { X, User, Mail, BookOpen, GraduationCap, Clock, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -275,6 +275,7 @@ export const AddTeacherModal: React.FC<AddTeacherModalProps> = ({
                   >
                     {className}
                     <button
+                      title='button'
                       type="button"
                       onClick={() => removeClass(className)}
                       className="text-blue-500 hover:text-blue-700"
@@ -321,6 +322,7 @@ export const AddTeacherModal: React.FC<AddTeacherModalProps> = ({
                   Status
                 </label>
                 <select
+                  title='select'
                   value={formData.status}
                   onChange={(e) => setFormData(prev => ({ ...prev, status: e.target.value as Teacher['status'] }))}
                   className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300 transition-all duration-200"

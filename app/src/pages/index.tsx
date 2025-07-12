@@ -1,36 +1,15 @@
-
+"use client"
 import React, { useState } from 'react';
-import { TeacherDashboard } from '@/components/TeacherDashboard';
-import { TeacherList } from '@/components/TeacherList';
-import { AddTeacherModal } from '@/components/AddTeacherModal';
-import { PaymentDashboard } from '@/components/PaymentDashboard';
-import { Navigation } from '@/components/Navigation';
+import { TeacherDashboard } from '../components/TeacherDashboard';
+import { TeacherList } from '../components/TeacherList';
+import { AddTeacherModal } from '../components/AddTeacherModal';
+import { PaymentDashboard } from '../components/PaymentDashboard';
+import { Navigation } from '../components/Navigation';
 import { Search, Plus, Users, BarChart3, Calendar, Settings, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Teacher } from '@/app/types/type';
 
-export interface Teacher {
-  id: string;
-  name: string;
-  email: string;
-  subject: string;
-  grade: string;
-  experience: number;
-  avatar?: string;
-  status: 'active' | 'on-leave' | 'inactive';
-  classes: string[];
-  performance: {
-    rating: number;
-    studentsCount: number;
-    attendance: number;
-  };
-  payment: {
-    salary: number;
-    paymentStatus: 'paid' | 'pending' | 'overdue';
-    lastPayment: string;
-    paymentMethod: 'bank' | 'check' | 'digital';
-    bonuses: number;
-  };
-}
+
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -41,8 +20,6 @@ const Index = () => {
     { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
     { id: 'teachers', label: 'Teachers', icon: Users },
     { id: 'payments', label: 'Payments', icon: CreditCard },
-    { id: 'schedule', label: 'Schedule', icon: Calendar },
-    { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
   const mockTeachers: Teacher[] = [

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Teacher } from '@/pages/Index';
+import { Teacher } from '@/app/types/type';
 import { 
   CreditCard, 
   DollarSign, 
@@ -115,13 +115,7 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({ teacher, onProcessPaym
         >
           {teacher.payment.paymentStatus === 'paid' ? 'Payment Complete' : 'Process Payment'}
         </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          className="px-3"
-        >
-          View Details
-        </Button>
+        
       </div>
     </div>
   );

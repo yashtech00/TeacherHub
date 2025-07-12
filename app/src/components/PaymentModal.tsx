@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Teacher } from '@/pages/Index';
+import { Teacher } from '@/app/types/type';
 import { 
   X, 
   CreditCard, 
@@ -10,8 +10,8 @@ import {
   Check,
   AlertCircle
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
 
 interface PaymentModalProps {
   isOpen: boolean;
@@ -78,6 +78,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, tea
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-xl font-semibold text-gray-900">Process Payment</h2>
           <button
+            title='x'
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
           >
@@ -152,6 +153,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, tea
               Payment Method
             </label>
             <select
+              title='select'
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value as typeof paymentMethod)}
               className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300"

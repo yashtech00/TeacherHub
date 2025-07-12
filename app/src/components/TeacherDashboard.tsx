@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Teacher } from '@/pages/Index';
+import { Teacher } from '@/app/types/type';
 import { Users, GraduationCap, TrendingUp, Clock, Star, Award, UserCheck, AlertCircle } from 'lucide-react';
 
 interface TeacherDashboardProps {

@@ -1,9 +1,9 @@
-
+"use client"
 import React, { useState } from 'react';
-import { Teacher } from '@/pages/Index';
-import { PaymentCard } from '@/components/PaymentCard';
-import { PaymentHistory } from '@/components/PaymentHistory';
-import { PaymentModal } from '@/components/PaymentModal';
+import { Teacher } from '@/app/types/type';
+import { PaymentCard } from '../components/PaymentCard';
+import { PaymentHistory } from '../components/PaymentHistory';
+import { PaymentModal } from '../components/PaymentModal';
 import { 
   CreditCard, 
   DollarSign, 
@@ -85,22 +85,7 @@ export const PaymentDashboard: React.FC<PaymentDashboardProps> = ({ teachers }) 
               Manage teacher salaries, bonuses, and payment schedules
             </p>
           </div>
-          <div className="flex gap-3 mt-4 sm:mt-0">
-            <Button 
-              variant="secondary"
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30"
-            >
-              <Download className="h-4 w-4 mr-2" />
-              Export Report
-            </Button>
-            <Button 
-              variant="secondary"
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30"
-            >
-              <Calendar className="h-4 w-4 mr-2" />
-              Schedule Payments
-            </Button>
-          </div>
+          
         </div>
       </div>
 
@@ -146,12 +131,6 @@ export const PaymentDashboard: React.FC<PaymentDashboardProps> = ({ teachers }) 
               {status === 'all' ? 'All Teachers' : `${status} (${teachers.filter(t => t.payment.paymentStatus === status).length})`}
             </Button>
           ))}
-        </div>
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm">
-            <Filter className="h-4 w-4 mr-2" />
-            More Filters
-          </Button>
         </div>
       </div>
 

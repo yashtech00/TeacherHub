@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Teacher } from '@/pages/Index';
+import { Teacher } from '@/app/types/type';
 import { 
   Calendar, 
   Download, 
@@ -97,6 +97,7 @@ export const PaymentHistory: React.FC<PaymentHistoryProps> = ({ teachers }) => {
             </div>
             
             <select
+              title='select'
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
               className="px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300 text-sm"
@@ -105,11 +106,6 @@ export const PaymentHistory: React.FC<PaymentHistoryProps> = ({ teachers }) => {
               <option value="amount">Sort by Amount</option>
               <option value="name">Sort by Name</option>
             </select>
-            
-            <Button variant="outline" size="sm">
-              <Download className="h-4 w-4 mr-2" />
-              Export
-            </Button>
           </div>
         </div>
       </div>
