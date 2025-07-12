@@ -2,7 +2,7 @@
 import React from 'react';
 import { Teacher } from '@/app/types/type';
 import { Mail, Users, Star, MoreVertical, Edit3, Trash2, Calendar } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface TeacherListProps {

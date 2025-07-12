@@ -6,7 +6,7 @@ import { AddTeacherModal } from '../components/AddTeacherModal';
 import { PaymentDashboard } from '../components/PaymentDashboard';
 import { Navigation } from '../components/Navigation';
 import { Search, Plus, Users, BarChart3, Calendar, Settings, CreditCard } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { Teacher } from '@/app/types/type';
 
 

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Teacher } from '@/app/types/type';
 import { X, User, Mail, BookOpen, GraduationCap, Clock, Users } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 
 interface AddTeacherModalProps {
   isOpen: boolean;
